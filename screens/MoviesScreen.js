@@ -24,7 +24,7 @@ const MoviesScreen = ({ navigation }) => {
   }
 
   useEffect(() => {
-    getUpcommingMovies();//laad upcomming movies wanneer scherm laadt
+    getUpcommingMovies();//laad upcomming movies wanneer het scherm laadt
   }, []);
 
 
