@@ -8,7 +8,7 @@ const MoviesScreen = ({ navigation }) => {
 
   const [movies, setMovies] = useState([]);
 
-  const getUpcommingMovies = async () => {
+  const getMoviesByRating = async () => {
     try {
       const response = await fetch("https://moviesminidatabase.p.rapidapi.com/movie/order/byRating/", {
         "method": "GET",
@@ -26,7 +26,7 @@ const MoviesScreen = ({ navigation }) => {
   }
 
   useEffect(() => {
-    getUpcommingMovies();//laad upcomming movies wanneer het scherm laadt
+    getMoviesByRating();//laad upcomming movies wanneer het scherm laadt
   }, []);
 
   //laad search results wanneer je in textinput typt
