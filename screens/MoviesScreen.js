@@ -29,6 +29,7 @@ const MoviesScreen = ({ navigation }) => {
     getUpcommingMovies();//laad upcomming movies wanneer het scherm laadt
   }, []);
 
+  //laad search results wanneer je in textinput typt
   const getMoviesByTitleSearch = async (enteredText) => {//argument meegegeven door onChangeText
     try {
       if (enteredText.length > 3) {
