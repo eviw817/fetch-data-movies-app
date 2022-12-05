@@ -65,6 +65,8 @@ const MoviesScreen = ({ navigation }) => {
           <MovieItem
             id={item.imdb_id}
             title={item.title}
+            navigation={navigation}
+            onSelectMovie={(selectedId) => { navigation.navigate('Details', { movieId: selectedId }) }}
           />
         )}
       />
