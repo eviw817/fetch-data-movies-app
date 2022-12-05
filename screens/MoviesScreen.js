@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, FlatList, TextInput } from 'react-native';
 
 import apiKey from '../apiKey';
+import MovieItem from '../components/MovieItem';
+
 const MoviesScreen = ({ navigation }) => {
 
   const [movies, setMovies] = useState([]);
@@ -34,7 +36,10 @@ const MoviesScreen = ({ navigation }) => {
         data={movies}
         keyExtractor={item => item.imdb_id}//gebruik imdb_id als key voor de flatlist
         renderItem={({ item }) => (
-          <Text>{item.title}</Text>
+          <MovieItem
+            id={item.imdb_id}
+            title={item.title}
+          />
         )}
       />
     </View >
